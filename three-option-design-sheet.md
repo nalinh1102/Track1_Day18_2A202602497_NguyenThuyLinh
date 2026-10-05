@@ -1,6 +1,6 @@
 # Three Option Design Sheet — Day 18
 
-> Bản chuẩn bị có AI hỗ trợ. Chưa có dữ liệu kiểm thử Day 18. Ba hàng evidence bên dưới đều từ P1, không phải ba Practice Notes độc lập. Cần bổ sung hai note còn lại và Solution Parking Lot Day 17 gốc; không dựng lại Parking Lot rồi nhận là dữ liệu đã có từ Day 17.
+> Bản thiết kế có AI hỗ trợ. Evidence Day 17 thật hiện chỉ có Practice Note Linh/P1. Người dùng xác nhận mới nhất hai notes Thuý/Duyên, Parking Lot tám ý tưởng và ba phiên Day 18 đều thuộc bộ mô phỏng; không tính là phỏng vấn/test thực tế. Prototype đã xuất bản; còn thiếu kiểm thử thực tế theo đề.
 
 ## 1. Thông tin nhóm
 
@@ -15,7 +15,7 @@
 - Thuý: Option A — Instant Diagnostic.
 - Duyên: Option B — Guided Diagnostic.
 
-Đây là phân công đang dùng để tiếp tục làm Day 18; cập nhật nếu nhóm thay đổi. Chưa coi là xác nhận từng thành viên đã hoàn thành prototype. Practice Notes Thuý/Duyên và Parking Lot được gửi bổ sung nhưng chưa xác nhận nguồn thực tế/Day 17. Người dùng đã xác nhận ba phiên Day 18 là test thật; xem tổng hợp nhóm và các mục cần đối chiếu.
+Đây là phân công đang dùng để tiếp tục làm Day 18; cập nhật nếu nhóm thay đổi. Practice Notes Thuý/Duyên và Parking Lot được xác nhận là mô phỏng. Xác nhận mới nhất cũng mô tả ba phiên Day 18 thuộc mô phỏng, thay thế xác nhận “test thật” trước đó. Xem tổng hợp nhóm để phân biệt dữ liệu.
 
 ---
 
@@ -190,5 +190,5 @@ Xem [test-guide.md](test-guide.md) cho context question, outcome task, bảy hà
 ### Kiểm định hiện tại
 - Gate 1: có evidence P1 và ẩn số; thiếu hai notes/Parking Lot gốc.
 - Gate 2–3: đã chuẩn bị cơ chế và quyền kiểm soát; cần nhóm kiểm tra chéo.
-- Gate 4: đã có source prototype; cần kiểm tra trình duyệt, tự vận hành và link công khai.
-- Gate 5: đã có ghi chép ba phiên được người dùng xác nhận là test thật, pattern, counter-evidence và một Next Change đề xuất. Cần nhóm rà soát nguồn và xác nhận quyết định chung; chưa tuyên bố validated.
+- Gate 4: prototype công khai và các file HTML/CSS/JS trả HTTP 200; kiểm tra logic đã qua. Chưa kiểm thử trực quan/tự vận hành với người thật trong môi trường này.
+- Gate 5: chưa đạt yêu cầu ba phiên thực tế. Có bộ mô phỏng và một Next Change nhóm chốt từ mô phỏng, cần test thật để đối chiếu.

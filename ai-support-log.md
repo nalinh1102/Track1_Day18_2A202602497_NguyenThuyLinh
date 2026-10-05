@@ -1,5 +1,12 @@
 # AI Support Log — Nguyễn Thùy Linh
 
+## Đính chính nguồn theo thông tin mới nhất của Linh
+- Linh xác nhận Practice Notes Thuý/Duyên, Parking Lot tám ý tưởng và P1/P2/P3 thuộc bộ mô phỏng. Những dòng “test thật” trong lịch sử log là xác nhận cũ, đã được thay thế; không dùng để coi bài đã có ba phiên thực tế.
+- Ngày 01–03/10/2026 và persona ngoài nhóm là thông tin mô phỏng. Tên hành động ghi gần nghĩa, không phải exact UI labels.
+- Linh cung cấp reflection tự viết và xác nhận nhóm chốt Next Change. AI đưa nguyên nội dung reflection vào bài, ghi quyết định dựa trên mô phỏng, không tạo evidence thật.
+- Kiểm tra bản công khai: trang gốc, prototype HTML, CSS và JS trả HTTP 200; logic A/B/C và recovery đã qua. Chưa kiểm thử trực quan bằng trình duyệt.
+- Báo cáo đã đồng bộ bằng Git trên máy trước đó; lỗi 403 chỉ thuộc connector. Lịch sử “chưa ghi lên GitHub” bên dưới mô tả trạng thái ở thời điểm đó.
+
 ## Chuẩn bị cập nhật báo cáo lên GitHub sau khi xuất bản
 - Ảnh người dùng cung cấp xác nhận GitHub Pages báo site đã live, cấu hình `main / (root)`.
 - Cập nhật README với link công khai trực tiếp A/B/C; cập nhật trạng thái prototype. Không coi thông báo triển khai là kiểm tra mọi thao tác giao diện.

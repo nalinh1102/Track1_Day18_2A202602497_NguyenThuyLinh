@@ -1,5 +1,11 @@
 # Tài liệu mô phỏng do người dùng cung cấp
 
+## Trạng thái nguồn mới nhất — thay thế xác nhận trước đó
+
+Linh xác nhận Practice Notes Thuý/Duyên, Parking Lot tám ý tưởng và P1/P2/P3 thuộc bộ dữ liệu mô phỏng. Vì vậy các dòng xác nhận “test thật” ở phần lịch sử bên dưới không còn là trạng thái hiện tại. Evidence thực tế Day 17 hiện chỉ có Practice Note của Linh tại `interview/notes.md`. Chưa có ba phiên test thực tế Day 18.
+
+Ngày 01/10, 02/10, 03/10/2026, bối cảnh sinh viên ngoài nhóm và các thao tác trong nguồn là dữ liệu mô phỏng. Linh giải thích tên hành động ghi gần nghĩa thay vì nguyên văn label UI. Next Change đã được nhóm chốt theo Linh, nhưng dựa vào mô phỏng, chưa phải quyết định được hỗ trợ bởi feedback người thật.
+
 ## Ghi chép test Day 18 — xác nhận mới
 
 [Nguồn ba phiên](test-supplement-demo.txt) được lưu nguyên văn. Sau khi gửi, người dùng xác nhận trực tiếp “đây là test thật”. Vì vậy ba phiên được tổ chức vào feedback Day 18; đây là xác nhận riêng, không đổi trạng thái của feedback synthetic trong `user-supplied-demo.txt` hoặc tự xác nhận nguồn Practice Notes Day 17. Còn thiếu ngày, bối cảnh P2/P3, xác nhận tester ngoài nhóm và phiên bản prototype để đối chiếu tên nút. Next Change trong nguồn được viết dưới dạng đề xuất, chờ xác nhận nhóm đã chốt.

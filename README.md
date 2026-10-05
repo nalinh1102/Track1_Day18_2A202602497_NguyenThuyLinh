@@ -1,6 +1,6 @@
 # Track 1 — Day 18: Three Prototypes, One Next Change
 
-> Đã chuẩn bị thiết kế, prototype và ghi chép ba phiên Day 18 được người dùng xác nhận là test thật. Còn thông tin cần bổ sung/đối chiếu trước khi nộp.
+> Đã có thiết kế, prototype công khai và bộ ghi chép mô phỏng Day 18. Chưa đủ ba phiên test thực tế theo yêu cầu đề; chưa hoàn tất bài nộp.
 
 Tài liệu bổ sung có nhãn DEMO/SYNTHETIC được lưu riêng tại [references](references/README.md). Không tính mô phỏng thành Practice Notes hoặc feedback thực tế. Phân công dự kiến và hoạt động cá nhân dưới đây được cập nhật từ xác nhận trực tiếp của Linh.
 
@@ -22,7 +22,7 @@ Nếu nhóm thay đổi phân công, cập nhật trước khi nộp. Phân côn
 ## 2. Hypothesis Problem
 Khi học viên đang học một bài và gặp nội dung không hiểu, họ gặp khó khăn trong việc xác định cần ôn kiến thức nào để tiếp tục bài, bởi vì nguyên nhân bị kẹt không rõ ràng, dẫn đến việc phải chuyển sang nguồn hoặc công cụ khác và mất thêm thời gian trước khi tiếp tục học.
 
-Evidence hiện có: [Practice Note P1](interview/notes.md) mô tả chụp slide gửi AI, không biết bắt đầu từ đâu và mất 5–10 phút đến vài tiếng tùy nội dung. Chưa xác nhận chắc một sự kiện trong 7 ngày; chưa đủ để kết luận thiếu kiến thức nền là nguyên nhân chính. Thiếu hai Practice Notes còn lại và Solution Parking Lot Day 17 gốc.
+Evidence hiện có: [Practice Note P1](interview/notes.md) mô tả chụp slide gửi AI, không biết bắt đầu từ đâu và mất 5–10 phút đến vài tiếng tùy nội dung. Chưa xác nhận chắc một sự kiện trong 7 ngày; chưa đủ để kết luận thiếu kiến thức nền là nguyên nhân chính. Người dùng xác nhận Practice Notes Thuý/Duyên và Parking Lot tám ý tưởng thuộc bộ mô phỏng. Chưa có hai Practice Notes thật và Parking Lot gốc Day 17 để thay thế.
 
 ## 3. Three Solution Options
 | Option | Cơ chế | Mở prototype |
@@ -50,13 +50,17 @@ Tôi tham gia xây dựng các cơ chế Control & Recovery gồm:
 Tôi đồng thời kiểm tra để Option C sử dụng cùng Common Context, dữ liệu Gradient Descent và visual components với Option A/B, nhằm giữ nguyên quy tắc 70/30 của bài.
 
 ## 5. Dữ liệu kiểm thử & bài học
-- [Feedback cá nhân](prototype-feedback-note.md): Linh điều phối P1 trên laptop theo A–B–C. P1 mở căn cứ A, dùng gợi ý AI trong C và chọn B; chấp nhận thêm bước để cảm thấy kết quả có căn cứ hơn.
-- [Tổng hợp nhóm](group-feedback-synthesis.md): ba phiên được người dùng xác nhận là test thật; Thuý điều phối P2 theo B–C–A, Duyên điều phối P3 theo C–A–B. P1/P3 chọn B, P2 chọn C. Không suy ra lựa chọn của phần lớn người học từ ba người.
-- Pattern/counter-evidence: hỏi thêm có thể làm gợi ý có vẻ có căn cứ hơn, nhưng thêm bước gây bất tiện; tự chọn có thể khó khi chưa biết nguyên nhân; P2 chọn cách giải thích khác thay vì ôn prerequisite.
-- Một Next Change đề xuất: giữ Guided Diagnostic B và thêm lựa chọn nhanh “Giải thích theo cách khác” trước diagnostic. **[CHỜ XÁC NHẬN NHÓM ĐÃ CHỐT]**.
-- Still Unproven: chưa chứng minh cơ chế nào giúp hiểu bài nhanh/tốt hơn trong học thực tế hoặc shortcut mới có hiệu quả.
-- Cần bổ sung: ngày các phiên, xác nhận tester ngoài nhóm, bối cảnh P2/P3 và bản prototype đã dùng. Tên nút trong ghi chép khác source hiện tại; giữ nguyên nguồn để đối chiếu.
-- Reflection: **[CÁ NHÂN TỰ VIẾT từ phiên trực tiếp điều phối]**.
+Theo thông tin nguồn mới nhất do Linh cung cấp, ba phiên P1/P2/P3 thuộc **bộ mô phỏng**, không phải bằng chứng ba người ngoài nhóm đã test thực tế. Các ngày 01/10, 02/10 và 03/10/2026 là ngày ghi trong bộ mô phỏng.
+
+- [Feedback cá nhân](prototype-feedback-note.md) và [tổng hợp nhóm](group-feedback-synthesis.md) được giữ làm tài liệu mô phỏng, không tính vào ba phiên bắt buộc.
+- Trong mô phỏng, P1/P3 chọn B và P2 chọn C; đây không phải lựa chọn của người dùng thật.
+- Next Change nhóm đã chốt theo thông tin Linh cung cấp: giữ Guided Diagnostic B, thêm “Giải thích theo cách khác” trước diagnostic. Căn cứ hiện tại là tình huống mô phỏng, cần kiểm tra lại bằng test thực tế.
+- Still Unproven: chưa biết cơ chế giúp hiểu bài nhanh hơn hay phù hợp với phần lớn người học; chưa có feedback thực tế xác nhận lựa chọn thiết kế.
+
+### Reflection cá nhân — nội dung Linh tự viết
+Qua quá trình dựng và thử các option, tôi nhận ra việc tăng quyền tự động cho AI không đồng nghĩa trải nghiệm sẽ tốt hơn. Nếu AI đưa ra chẩn đoán quá nhanh, người dùng có thể không hiểu hệ thống dựa vào đâu để kết luận. Ngược lại, nếu giao toàn bộ lựa chọn cho người học thì họ có thể vẫn bị mắc kẹt vì chính họ chưa biết mình đang thiếu kiến thức gì. Tôi thấy hướng phù hợp hơn là AI hỏi vừa đủ để có căn cứ rồi vẫn để người học có quyền đổi hướng hoặc yêu cầu cách giải thích khác.
+
+Reflection được cung cấp trong bối cảnh dựng/thử bộ mô phỏng; chưa thay thế phần học được từ một phiên thực tế do Linh điều phối.
 
 ## 6. AI Support Log
 Codex hỗ trợ tổ chức tài liệu, thiết kế tương tác, prototype với phản hồi dựng sẵn và mẫu test. Không tạo evidence tester hoặc viết thay reflection. [Nhật ký đầy đủ](ai-support-log.md).
@@ -75,12 +79,15 @@ Khi xây dựng prototype, tôi kiểm tra lại nội dung, luồng nút bấm 
 - [ ] Hai Practice Notes còn lại và Parking Lot gốc.
 - [x] Phân công dự kiến và những phần Linh đã tham gia được xác nhận.
 - [x] Bổ sung nội dung đóng góp do Linh tự cung cấp.
-- [ ] Bổ sung reflection cá nhân sau test.
+- [x] Bổ sung reflection do Linh tự viết về dựng/thử option.
+- [ ] Bổ sung bài học từ phiên thực tế khi hoàn thành.
 - [x] Linh xác nhận kiểm tra Option C/context/recovery và cung cấp link công khai.
 - [ ] Kiểm tra link công khai trên thiết bị bên ngoài và đường dẫn trực tiếp A/B/C.
 - [ ] Ba tester ngoài nhóm, mỗi người thử đủ A/B/C.
-- [x] Tổ chức ghi chép cá nhân và liên kết hai notes đồng đội từ nguồn người dùng cung cấp.
-- [ ] Nhóm đối chiếu notes, xác nhận bản test và chốt một Next Change.
+- [x] Lưu bộ ghi chép mô phỏng có nhãn rõ ràng.
+- [ ] Bổ sung ba feedback thực tế độc lập.
+- [x] Linh xác nhận nhóm đã chốt một Next Change từ mô phỏng.
+- [ ] Đối chiếu quyết định với dữ liệu test thực tế.
 - [ ] Pattern, counter-evidence, một Next Change, Still Unproven.
 - [x] Bổ sung phần Linh tự kiểm tra AI theo nội dung Linh cung cấp.
 
