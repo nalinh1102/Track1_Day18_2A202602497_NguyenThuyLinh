@@ -1,0 +1,128 @@
+Practice Note — Trần Thị Thuý
+1. Tình huống gần nhất
+Người tham gia đang học một bài có liên quan đến Machine Learning. Trong lúc xem slide, có một đoạn công thức và phần giải thích phía dưới mà người tham gia đọc lại nhiều lần nhưng vẫn chưa hiểu được ý chính.
+Người tham gia nói rằng lúc đó khó nhất không phải là không có tài liệu để xem, mà là không biết chính xác mình đang thiếu phần kiến thức nào để quay lại học trước.
+2. Người tham gia đã làm gì
+Khi nhận ra mình chưa hiểu, người tham gia:
+1. Đọc lại slide thêm một lần.
+2. Mở lại phần bài trước để xem có kiến thức nào liên quan không.
+3. Sau đó tìm trên Google bằng từ khóa gần giống với nội dung trong slide.
+4. Vì kết quả tìm kiếm khá nhiều và khó chọn, người tham gia chuyển sang hỏi ChatGPT.
+5. Người tham gia copy công thức vào và hỏi AI giải thích từng thành phần.
+6. Sau đó tiếp tục hỏi “trước khi hiểu phần này thì cần biết gì trước?”.
+3. Khó khăn và workaround
+Khó khăn chính:
+- Không biết phần nào trong kiến thức nền đang bị thiếu.
+- Khi tự tìm trên Google thì có quá nhiều nguồn.
+- Có nguồn giải thích quá sâu so với mức đang cần.
+- Mất thời gian chuyển qua lại giữa slide, trình duyệt và AI.
+Workaround:
+- Đọc lại bài cũ.
+- Search từ khóa trên Google.
+- Dùng ChatGPT để yêu cầu giải thích đơn giản hơn.
+- Hỏi AI liệt kê các kiến thức cần biết theo thứ tự.
+4. Hậu quả
+Người tham gia cho biết nếu phần kiến thức không quá khó thì có thể xử lý trong khoảng 10–15 phút.
+Nếu phần đó liên quan đến nhiều kiến thức trước đây thì có thể mất lâu hơn vì phải quay lại xem từng phần một. Trong lúc đó, mạch học hiện tại bị ngắt và dễ quên mình đang học đến đâu.
+5. Điều đáng chú ý
+Người tham gia không hoàn toàn muốn AI tự quyết định ngay mình “thiếu kiến thức gì”.
+Họ muốn AI chỉ ra vài khả năng trước, sau đó cho họ xem lý do vì sao AI đưa ra gợi ý đó.
+Điều này cho thấy người học có thể cần hỗ trợ diagnostic, nhưng vẫn muốn giữ quyền kiểm tra và quyết định.
+Practice Note — Lê Thị Duyên
+1. Tình huống gần nhất
+Người tham gia đang học một bài có khái niệm khá trừu tượng. Slide có định nghĩa và công thức nhưng cách diễn đạt khiến người tham gia cảm thấy khó hình dung.
+Ban đầu người tham gia nghĩ mình bị thiếu kiến thức nền, nhưng sau khi hỏi AI bằng một cách khác thì lại hiểu khá nhanh.
+2. Người tham gia đã làm gì
+Khi gặp phần không hiểu, người tham gia:
+1. Đọc lại đoạn định nghĩa.
+2. Thử xem ví dụ trong slide.
+3. Sau đó hỏi AI giải thích “như cho người mới học”.
+4. Tiếp tục yêu cầu AI cho một ví dụ đời thường.
+5. Sau khi đọc ví dụ, người tham gia quay lại slide và hiểu được phần đang học.
+3. Khó khăn và workaround
+Khó khăn:
+- Nội dung trên slide quá ngắn và mang tính học thuật.
+- Ví dụ trong bài chưa đủ trực quan.
+- Người tham gia khó biết vấn đề là do thiếu kiến thức hay chỉ do cách giải thích chưa phù hợp.
+Workaround:
+- Hỏi AI giải thích lại bằng ngôn ngữ đơn giản.
+- Yêu cầu ví dụ gần gũi hơn.
+- So sánh phần AI giải thích với nội dung slide.
+4. Hậu quả
+Với trường hợp này, người tham gia không mất quá nhiều thời gian. Sau khi có một cách giải thích khác, họ có thể tiếp tục học khá nhanh.
+Tuy nhiên, nếu ngay từ đầu AI yêu cầu họ học lại nhiều prerequisite thì người tham gia cho rằng có thể sẽ cảm thấy bị “đẩy đi quá xa” khỏi phần đang học.
+5. Điều đáng chú ý
+Không phải lần nào không hiểu bài cũng đến từ việc thiếu kiến thức nền.
+Có trường hợp người học chỉ cần:
+- một cách diễn đạt khác;
+- ví dụ dễ hiểu hơn;
+- hoặc giải thích ngắn hơn.
+Điều này làm nhóm cần cẩn thận nếu thiết kế AI Tutor theo hướng luôn chẩn đoán prerequisite trước.
+Solution Parking Lot
+1. Instant Diagnostic
+Khi người học bấm “Tôi chưa hiểu”, AI tự đọc context của bài học và đưa ra ngay một prerequisite mà người học có thể đang thiếu.
+Ví dụ:
+Có thể bạn đang bị kẹt ở khái niệm Gradient.
+
+Sau đó AI đưa refresher ngắn.
+2. Guided Diagnostic
+Khi người học bấm “Tôi chưa hiểu”, AI không kết luận ngay mà hỏi 1–2 câu để xác định điểm đang vướng.
+Ví dụ:
+- Bạn không hiểu ký hiệu?
+- Bạn không hiểu công thức?
+- Bạn không hiểu tại sao bước này được dùng?
+- Bạn không chắc mình đang vướng ở đâu?
+Sau đó AI mới đưa ra đề xuất.
+3. Learner-Controlled Refresher
+AI hiển thị một số chủ đề có thể liên quan tới phần bài hiện tại.
+Ví dụ:
+- Gradient
+- Learning Rate
+- Loss Function
+Người học tự chọn phần muốn ôn.
+4. Explain Differently
+Thay vì mặc định người học thiếu kiến thức nền, AI cho phép chọn:
+- Giải thích đơn giản hơn
+- Cho ví dụ thực tế
+- Dùng phép so sánh
+- Giải thích từng bước
+Phương án này tập trung vào vấn đề cách giải thích chưa phù hợp.
+5. Prerequisite Map
+AI hiển thị một sơ đồ ngắn về các kiến thức liên quan tới phần đang học.
+Ví dụ:
+Đạo hàm
+   ↓
+Gradient
+   ↓
+Loss Function
+   ↓
+Gradient Descent
+
+Người học nhìn sơ đồ và chọn phần mình muốn xem lại.
+6. Confidence-Based Diagnostic
+AI đưa ra nhiều khả năng kèm mức độ chắc chắn.
+Ví dụ:
+Có thể bạn đang vướng ở:
+Gradient — khả năng cao
+Đạo hàm — khả năng trung bình
+Learning Rate — khả năng thấp
+
+Người học chọn xem phần phù hợp.
+7. Ask AI to Recommend
+Người học vẫn giữ quyền chọn, nhưng nếu không biết nên bắt đầu từ đâu thì có nút:
+“AI gợi ý cho tôi”
+
+AI lúc này mới thực hiện diagnostic.
+8. Human Escalation
+Nếu AI không đủ căn cứ để đưa ra hướng hỗ trợ, hệ thống cho phép:
+“Tôi vẫn chưa hiểu — cần hỗ trợ thêm”
+
+Sau đó gợi ý:
+- hỏi mentor;
+- hỏi TA;
+- xem tài liệu liên quan;
+- lưu lại phần đang bị kẹt để xem sau.
+Với Day 18, từ Parking Lot này, bộ 3 option mạnh nhất vẫn là:
+- Option A — Instant Diagnostic
+- Option B — Guided Diagnostic
+- Option C — Learner-Controlled Refresher

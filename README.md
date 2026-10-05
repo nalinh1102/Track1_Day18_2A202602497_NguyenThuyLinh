@@ -1,283 +1,87 @@
-# Track 1 - Day 17 - Lab 2
+# Track 1 — Day 18: Three Prototypes, One Next Change
 
-## 1. Thông tin cá nhân và nhóm
+> Đã chuẩn bị thiết kế, prototype và ghi chép ba phiên Day 18 được người dùng xác nhận là test thật. Còn thông tin cần bổ sung/đối chiếu trước khi nộp.
 
-- MHV: 2A202602497
-- Họ và tên: Nguyễn Thùy Linh
-- Tên nhóm: Matcha
-- Thành viên:
-Trần Thị Thuý - 2A202602960
-Lê Thị Duyên - 2A202602411
-Nguyễn Thùy Linh - 2A202602497
-- Case đã chọn: Case A — AI Tutor: Diagnostic Refresher
+Tài liệu bổ sung có nhãn DEMO/SYNTHETIC được lưu riêng tại [references](references/README.md). Không tính mô phỏng thành Practice Notes hoặc feedback thực tế. Phân công dự kiến và hoạt động cá nhân dưới đây được cập nhật từ xác nhận trực tiếp của Linh.
 
----
+## 1. Thông tin cá nhân & đội ngũ
+- Nguyễn Thùy Linh — 2A202602497.
+- Nhóm Matcha: Trần Thị Thuý — 2A202602960; Lê Thị Duyên — 2A202602411; Nguyễn Thùy Linh — 2A202602497.
+- Case A — AI Tutor: Diagnostic Refresher, kế thừa Day 17.
 
-## 2. Problem Hypothesis Brief
+Phân công dự kiến đang dùng để tiếp tục Day 18:
 
-### Solution Directive
+| Thành viên | Option phụ trách |
+|---|---|
+| Nguyễn Thùy Linh | C — Learner-Controlled Refresher |
+| Trần Thị Thuý | A — Instant Diagnostic |
+| Lê Thị Duyên | B — Guided Diagnostic |
 
-Khi học viên bấm “Tôi vẫn chưa hiểu”, hệ thống sử dụng nội dung bài hiện tại, các câu trả lời gần đây và lịch sử học tập để đặt câu hỏi chẩn đoán, xác định một khái niệm nền cần ôn, giải thích ngắn và đưa học viên trở lại bài đang học.
+Nếu nhóm thay đổi phân công, cập nhật trước khi nộp. Phân công không đồng nghĩa đã hoàn thành công việc.
 
-### Capability trung tính
+## 2. Hypothesis Problem
+Khi học viên đang học một bài và gặp nội dung không hiểu, họ gặp khó khăn trong việc xác định cần ôn kiến thức nào để tiếp tục bài, bởi vì nguyên nhân bị kẹt không rõ ràng, dẫn đến việc phải chuyển sang nguồn hoặc công cụ khác và mất thêm thời gian trước khi tiếp tục học.
 
-Hỗ trợ người học xác định nguyên nhân khiến họ bị kẹt trong một bài học, cung cấp phần kiến thức cần thiết để họ hiểu lại và tiếp tục bài đang học.
+Evidence hiện có: [Practice Note P1](interview/notes.md) mô tả chụp slide gửi AI, không biết bắt đầu từ đâu và mất 5–10 phút đến vài tiếng tùy nội dung. Chưa xác nhận chắc một sự kiện trong 7 ngày; chưa đủ để kết luận thiếu kiến thức nền là nguyên nhân chính. Thiếu hai Practice Notes còn lại và Solution Parking Lot Day 17 gốc.
 
-### Expected Change
-
-1. Học viên xác định rõ hơn phần kiến thức khiến họ không theo kịp bài.
-2. Học viên giảm việc thử nhiều nguồn hoặc cách xử lý khác nhau một cách ngẫu nhiên.
-3. Học viên có thể tiếp tục bài hiện tại với ít gián đoạn hơn.
-
-### Actor được chọn
-
-Học viên.
-
-Học viên là người trực tiếp trải nghiệm tình huống không hiểu bài, thực hiện workaround và chịu hậu quả nếu vấn đề không được giải quyết.
-
-### Situation & Job
-
-Khi đang học một bài và gặp một khái niệm không hiểu, học viên đang cố hiểu đủ nội dung để tiếp tục bài bằng cách đọc lại, tìm tài liệu khác, hỏi AI hoặc hỏi người khác.
-
-### JTBD Hypothesis
-
-Khi bị kẹt ở một khái niệm trong lúc học, tôi muốn nhanh chóng hiểu mình đang thiếu kiến thức gì để có thể tiếp tục bài hiện tại mà không bị gián đoạn quá lâu.
-
-### Pain Hypothesis A
-
-Khi đang học một nội dung khó, học viên gặp khó khăn trong việc tiếp tục bài vì họ không xác định được phần kiến thức nền mình đang thiếu, dẫn đến việc phải thử nhiều nguồn hoặc cách giải thích khác nhau và bị gián đoạn mạch học.
-
-### Pain Hypothesis B
-
-Khi đang học một nội dung khó, học viên gặp khó khăn trong việc tiếp tục bài không phải vì thiếu kiến thức nền, mà vì cách giải thích hiện tại chưa phù hợp với cách họ tiếp thu, dẫn đến việc phải tìm một cách diễn đạt, ví dụ hoặc nguồn học khác.
-
-### Giả thuyết chọn để điều tra trước
-
-Pain Hypothesis A.
-
-Lý do: solution directive hiện tại ngầm giả định vấn đề cốt lõi là thiếu kiến thức nền, nên nhóm cần kiểm tra xem giả định này có thực sự xuất hiện trong các tình huống gần đây hay không.
-
-### Problem Hypothesis
-
-Khi đang học một bài và gặp một khái niệm không hiểu, học viên có thể khó xác định phần kiến thức nền mình đang thiếu. Họ phải thử nhiều cách như đọc lại, tìm nguồn khác hoặc hỏi người khác, dẫn đến gián đoạn mạch học và mất thêm thời gian trước khi có thể tiếp tục bài.
-
-### Điều gì phải đúng để giả thuyết đứng vững
-
-- Học viên thực sự gặp tình huống này gần đây.
-- Họ không dễ tự xác định nguyên nhân.
-- Họ đã dùng workaround để xử lý.
-- Workaround tạo ra chi phí hoặc gián đoạn đáng kể.
-
-### Điều gì có thể khiến nhóm sửa hoặc bác bỏ giả thuyết
-
-Nếu phần lớn người học chỉ cần một cách giải thích khác, tự xử lý rất nhanh hoặc không coi việc bị kẹt là vấn đề đáng kể, giả thuyết về thiếu kiến thức nền cần được sửa.
-
-### Evidence Map
-
-| Cần kiểm tra | Evidence làm nhóm tin hơn | Evidence làm nhóm nghi ngờ hoặc bác bỏ |
+## 3. Three Solution Options
+| Option | Cơ chế | Mở prototype |
 |---|---|---|
-| Situation có thật | User kể được một lần gần đây bị kẹt khi học với trình tự cụ thể | User không nhớ được tình huống cụ thể hoặc tình huống xảy ra rất hiếm |
-| Pain có ý nghĩa | User phải dừng bài, đổi nguồn, mất nhiều thời gian hoặc ảnh hưởng tiến độ học | User xử lý rất nhanh và không thấy ảnh hưởng đáng kể |
-| Workaround tồn tại | User đọc lại bài, tìm Google, YouTube, hỏi ChatGPT, hỏi bạn hoặc mentor | User gần như không cần dùng cách hỗ trợ nào khác |
-| Consequence tồn tại | User mất thời gian, mất mạch học, bỏ qua nội dung hoặc trì hoãn việc học | Tình huống không tạo ra hậu quả đáng kể |
-| Pattern có lặp | User kể được nhiều lần tương tự gần đây | Đây chỉ là một trường hợp hiếm hoặc cá biệt |
+| A — Instant Diagnostic | AI đề xuất ngay; người học xác nhận hoặc bác bỏ | [A](https://nalinh1102.github.io/Track1_Day18_2A202602497_NguyenThuyLinh/?option=A) |
+| B — Guided Diagnostic | AI hỏi hai câu rồi đề xuất; người học quyết định | [B](https://nalinh1102.github.io/Track1_Day18_2A202602497_NguyenThuyLinh/?option=B) |
+| C — Learner-Controlled Refresher | Người học tự chọn kiến thức hoặc cách giải thích | [C](https://nalinh1102.github.io/Track1_Day18_2A202602497_NguyenThuyLinh/?option=C) |
 
-### Big 3 — Ba điều quan trọng nhất cần học
+Xem [thiết kế](three-option-design-sheet.md), [hướng dẫn mở](prototype-link.md), [kịch bản test](test-guide.md). [Prototype GitHub Pages](https://nalinh1102.github.io/Track1_Day18_2A202602497_NguyenThuyLinh/) đã được GitHub báo “Your site is live at” trong ảnh người dùng cung cấp. Cần kiểm tra thao tác và truy cập ẩn danh trước khi nộp.
 
-| Điều cần học | Evidence cần tìm | Điều gì khiến nhóm xem lại giả thuyết? |
-|---|---|---|
-| 1. Người học có thật sự gặp tình huống bị kẹt trong một bài gần đây không? | Một sự kiện cụ thể trong 7 ngày gần đây | Không có sự kiện cụ thể hoặc tình huống rất hiếm |
-| 2. Khi bị kẹt, người học thực sự đã làm gì? | Chuỗi hành động, nguồn, công cụ và workaround đã sử dụng | User xử lý gần như ngay lập tức mà không tốn công |
-| 3. Nguyên nhân của việc bị kẹt là gì và hậu quả có đáng kể không? | Nguyên nhân user tự mô tả, thời gian bỏ ra và ảnh hưởng tới việc tiếp tục học | Nguyên nhân chủ yếu chỉ là cách diễn đạt chưa phù hợp hoặc đây chỉ là bất tiện nhỏ |
+## 4. Đóng góp cụ thể của tôi
+Tôi phụ trách chính Option C — Learner-Controlled Refresher.
 
-### Câu hỏi đáng sợ
+Tôi tham gia rà soát lại Hypothesis Problem và evidence từ Day 17, cùng nhóm xác định ba Solution Options và xây dựng Comparison Contract.
 
-Điều gì sẽ xảy ra nếu người học thực tế không bị kẹt vì thiếu kiến thức nền, mà chỉ cần một cách giải thích khác phù hợp hơn?
+Ở Option C, tôi tập trung vào cơ chế để người học giữ quyền quyết định: AI không tự kết luận ngay kiến thức nào đang thiếu mà đưa ra các prerequisite liên quan để người học lựa chọn. Tôi cũng đưa vào lựa chọn “Giải thích theo cách khác” để xử lý trường hợp vấn đề không xuất phát từ thiếu kiến thức nền.
 
-Nếu evidence cho thấy điều này lặp lại ở nhiều interview, nhóm cần xem lại Pain Hypothesis A và có thể chuyển trọng tâm sang Pain Hypothesis B.
+Tôi tham gia xây dựng các cơ chế Control & Recovery gồm:
 
-## 3. Conversation Guide - Final Version
+- Chọn chủ đề khác.
+- Nhờ AI gợi ý khi không biết lựa chọn.
+- Quay lại bài học.
+- Yêu cầu cách giải thích khác.
 
-### Tiêu chí tuyển người
+Tôi đồng thời kiểm tra để Option C sử dụng cùng Common Context, dữ liệu Gradient Descent và visual components với Option A/B, nhằm giữ nguyên quy tắc 70/30 của bài.
 
-Người tham gia cần có ít nhất một lần trong 7 ngày gần đây đang học nhưng gặp một phần không hiểu và đã phải làm gì đó để xử lý.
+## 5. Dữ liệu kiểm thử & bài học
+- [Feedback cá nhân](prototype-feedback-note.md): Linh điều phối P1 trên laptop theo A–B–C. P1 mở căn cứ A, dùng gợi ý AI trong C và chọn B; chấp nhận thêm bước để cảm thấy kết quả có căn cứ hơn.
+- [Tổng hợp nhóm](group-feedback-synthesis.md): ba phiên được người dùng xác nhận là test thật; Thuý điều phối P2 theo B–C–A, Duyên điều phối P3 theo C–A–B. P1/P3 chọn B, P2 chọn C. Không suy ra lựa chọn của phần lớn người học từ ba người.
+- Pattern/counter-evidence: hỏi thêm có thể làm gợi ý có vẻ có căn cứ hơn, nhưng thêm bước gây bất tiện; tự chọn có thể khó khi chưa biết nguyên nhân; P2 chọn cách giải thích khác thay vì ôn prerequisite.
+- Một Next Change đề xuất: giữ Guided Diagnostic B và thêm lựa chọn nhanh “Giải thích theo cách khác” trước diagnostic. **[CHỜ XÁC NHẬN NHÓM ĐÃ CHỐT]**.
+- Still Unproven: chưa chứng minh cơ chế nào giúp hiểu bài nhanh/tốt hơn trong học thực tế hoặc shortcut mới có hiệu quả.
+- Cần bổ sung: ngày các phiên, xác nhận tester ngoài nhóm, bối cảnh P2/P3 và bản prototype đã dùng. Tên nút trong ghi chép khác source hiện tại; giữ nguyên nguồn để đối chiếu.
+- Reflection: **[CÁ NHÂN TỰ VIẾT từ phiên trực tiếp điều phối]**.
 
-### Recruitment Check
+## 6. AI Support Log
+Codex hỗ trợ tổ chức tài liệu, thiết kế tương tác, prototype với phản hồi dựng sẵn và mẫu test. Không tạo evidence tester hoặc viết thay reflection. [Nhật ký đầy đủ](ai-support-log.md).
 
-Trong 7 ngày gần đây, bạn có lần nào đang học mà gặp một phần không hiểu và phải tự làm gì đó để xử lý không?
+### Phần tôi kiểm tra và chỉnh sửa từ AI
 
-### Lời mở đầu
+AI hỗ trợ tôi phân tích đề bài, đề xuất ba solution mechanism, xây dựng cấu trúc Human–AI Decision Table và tạo nội dung mẫu cho prototype.
 
-Mình đang tìm hiểu cách mọi người xử lý khi gặp một phần nội dung chưa hiểu trong lúc học.
+Tôi đối chiếu các đề xuất với yêu cầu chính thức của Day 18 và evidence từ repo Day 17 trước khi sử dụng.
 
-Không có câu trả lời đúng hay sai. Mình muốn nghe về một tình huống thật đã xảy ra gần đây.
+Tôi không sử dụng AI để thay thế quyết định cuối cùng về phân công nhóm hoặc dữ liệu kiểm thử thực tế.
 
-Mình xin phép ghi âm cuộc trò chuyện để xem lại cách mình phỏng vấn và phục vụ bài học. Bản ghi chỉ dùng cho mục đích học tập và không được chia sẻ công khai.
+Khi xây dựng prototype, tôi kiểm tra lại nội dung, luồng nút bấm và recovery để đảm bảo ba option không chỉ khác giao diện mà khác thực sự về cơ chế Human–AI interaction.
 
-Bạn có đồng ý cho mình ghi âm không?
+## Checklist trước khi nộp
+- [ ] Hai Practice Notes còn lại và Parking Lot gốc.
+- [x] Phân công dự kiến và những phần Linh đã tham gia được xác nhận.
+- [x] Bổ sung nội dung đóng góp do Linh tự cung cấp.
+- [ ] Bổ sung reflection cá nhân sau test.
+- [x] Linh xác nhận kiểm tra Option C/context/recovery và cung cấp link công khai.
+- [ ] Kiểm tra link công khai trên thiết bị bên ngoài và đường dẫn trực tiếp A/B/C.
+- [ ] Ba tester ngoài nhóm, mỗi người thử đủ A/B/C.
+- [x] Tổ chức ghi chép cá nhân và liên kết hai notes đồng đội từ nguồn người dùng cung cấp.
+- [ ] Nhóm đối chiếu notes, xác nhận bản test và chốt một Next Change.
+- [ ] Pattern, counter-evidence, một Next Change, Still Unproven.
+- [x] Bổ sung phần Linh tự kiểm tra AI theo nội dung Linh cung cấp.
 
-### Story Opener
-
-Kể mình nghe về lần gần nhất trong 7 ngày qua bạn đang học mà gặp một phần không hiểu và phải tìm cách xử lý?
-
-### Big 3 Questions
-
-**1. Tình huống thực tế**
-
-Lúc đó bạn đang học gì, và chuyện gì khiến bạn nhận ra mình chưa hiểu?
-
-**2. Hành vi và workaround**
-
-Sau khi nhận ra mình chưa hiểu, việc đầu tiên bạn làm là gì?
-
-Sau đó chuyện gì xảy ra tiếp theo?
-
-**3. Nguyên nhân và consequence**
-
-Theo bạn lúc đó điều gì khiến bạn bị kẹt nhất?
-
-Việc đó ảnh hưởng thế nào đến việc tiếp tục học?
-
-### Probe Bank
-
-- Sau đó chuyện gì xảy ra?
-- Bạn làm gì tiếp theo?
-- Vì sao bạn chọn cách đó?
-- Bạn đã thử cách nào khác chưa?
-- Bạn dùng nguồn hoặc công cụ nào?
-- Bạn mất khoảng bao lâu?
-- Kết quả sau đó thế nào?
-- Bạn có phải dừng bài hoặc quay lại sau không?
-- Lần gần nhất trước đó có tình huống tương tự là khi nào?
-
-### Competing Hypothesis Check
-
-Sau khi người tham gia đã kể đầy đủ câu chuyện:
-
-Theo bạn, lúc đó bạn bị kẹt chủ yếu vì chưa có đủ kiến thức nền, vì cách giải thích chưa phù hợp, hay vì một lý do khác?
-
-Follow-up:
-
-Điều gì khiến bạn nghĩ như vậy?
-
-### Questions to Avoid
-
-Không hỏi:
-
-- Bạn có muốn AI giúp bạn không?
-- Nếu có nút “Tôi vẫn chưa hiểu” bạn có dùng không?
-- Theo bạn nên thêm tính năng gì?
-- Bạn nghĩ nền tảng nên phát triển như thế nào?
-- Bạn có thích AI Tutor không?
-- Feature này có hữu ích không?
----
-
-## 4. Practice Reflection
-
-**1. Câu hỏi nào đã giúp user kể một tình huống cụ thể?**
-
-Câu hỏi “Bạn có thể kể lần gần nhất bạn gặp một phần không hiểu và bạn đã giải quyết nó như thế nào?” giúp người tham gia bắt đầu mô tả hành vi thực tế. Từ đó, người tham gia cho biết họ chụp ảnh phần slide không hiểu, gửi sang AI bên ngoài và yêu cầu giải thích hoặc tạo lộ trình kiến thức.
-
-Các câu hỏi về thời gian như “Quá trình đó thường mất khoảng bao nhiêu thời gian?” cũng giúp làm rõ consequence. Người tham gia cho biết nội dung đơn giản có thể mất khoảng 5–10 phút, trong khi nội dung phức tạp có thể mất vài tiếng và phải xem lại sau.
-
-**2. Chỗ nào mình cần làm tốt hơn ở lần phỏng vấn thật?**
-
-Tôi chưa giữ cuộc phỏng vấn tập trung đủ lâu vào một sự kiện cụ thể. Sau khi người tham gia bắt đầu kể, tôi nên tiếp tục hỏi theo trình tự “sau đó chuyện gì xảy ra?” thay vì chuyển sang các tình huống chung khác.
-
-Ngoài ra, câu hỏi “Theo bạn nền tảng hiện tại có cách nào có thể phát triển để giúp bạn giải quyết việc hiểu bài nhanh hơn không?” đã chuyển từ problem interview sang hỏi ý tưởng solution. Điều này khiến người tham gia bắt đầu đề xuất một nút và cách AI nên hoạt động, trong khi mục tiêu của bài là tìm evidence về problem chứ không phải thiết kế feature.
-
-Trong lần phỏng vấn thật, tôi sẽ tránh hỏi user nên xây tính năng gì và thay bằng các câu hỏi về cách họ đang xử lý vấn đề hiện tại.
-
-**3. Sau khi luyện, nhóm đã sửa Conversation Guide ở đâu và vì sao?**
-
-Nhóm sửa Conversation Guide theo ba hướng:
-
-- Neo mạnh hơn vào một sự kiện gần nhất thay vì hỏi về hành vi chung.
-- Thêm các câu follow-up theo trình tự hành động như “Sau đó chuyện gì xảy ra?” và “Bạn làm gì tiếp theo?”.
-- Loại bỏ các câu hỏi yêu cầu user đề xuất solution hoặc đánh giá feature.
-
-Nhóm cũng bổ sung câu hỏi để kiểm tra giả thuyết cạnh tranh: người học bị kẹt vì thiếu kiến thức nền, vì cách giải thích chưa phù hợp hay vì một nguyên nhân khác.
-
-Mục tiêu của các thay đổi này là giữ cuộc phỏng vấn tập trung vào behavior, workaround và consequence đã thực sự xảy ra.### Practice Reflection
-
-**1. Câu hỏi nào đã giúp user kể một tình huống cụ thể?**
-
-Câu hỏi “Bạn có thể kể lần gần nhất bạn gặp một phần không hiểu và bạn đã giải quyết nó như thế nào?” giúp người tham gia bắt đầu mô tả hành vi thực tế. Từ đó, người tham gia cho biết họ chụp ảnh phần slide không hiểu, gửi sang AI bên ngoài và yêu cầu giải thích hoặc tạo lộ trình kiến thức.
-
-Các câu hỏi về thời gian như “Quá trình đó thường mất khoảng bao nhiêu thời gian?” cũng giúp làm rõ consequence. Người tham gia cho biết nội dung đơn giản có thể mất khoảng 5–10 phút, trong khi nội dung phức tạp có thể mất vài tiếng và phải xem lại sau.
-
-**2. Chỗ nào mình cần làm tốt hơn ở lần phỏng vấn thật?**
-
-Tôi chưa giữ cuộc phỏng vấn tập trung đủ lâu vào một sự kiện cụ thể. Sau khi người tham gia bắt đầu kể, tôi nên tiếp tục hỏi theo trình tự “sau đó chuyện gì xảy ra?” thay vì chuyển sang các tình huống chung khác.
-
-Ngoài ra, câu hỏi “Theo bạn nền tảng hiện tại có cách nào có thể phát triển để giúp bạn giải quyết việc hiểu bài nhanh hơn không?” đã chuyển từ problem interview sang hỏi ý tưởng solution. Điều này khiến người tham gia bắt đầu đề xuất một nút và cách AI nên hoạt động, trong khi mục tiêu của bài là tìm evidence về problem chứ không phải thiết kế feature.
-
-Trong lần phỏng vấn thật, tôi sẽ tránh hỏi user nên xây tính năng gì và thay bằng các câu hỏi về cách họ đang xử lý vấn đề hiện tại.
-
-**3. Sau khi luyện, nhóm đã sửa Conversation Guide ở đâu và vì sao?**
-
-Nhóm sửa Conversation Guide theo ba hướng:
-
-- Neo mạnh hơn vào một sự kiện gần nhất thay vì hỏi về hành vi chung.
-- Thêm các câu follow-up theo trình tự hành động như “Sau đó chuyện gì xảy ra?” và “Bạn làm gì tiếp theo?”.
-- Loại bỏ các câu hỏi yêu cầu user đề xuất solution hoặc đánh giá feature.
-
-Nhóm cũng bổ sung câu hỏi để kiểm tra giả thuyết cạnh tranh: người học bị kẹt vì thiếu kiến thức nền, vì cách giải thích chưa phù hợp hay vì một nguyên nhân khác.
-
-Mục tiêu của các thay đổi này là giữ cuộc phỏng vấn tập trung vào behavior, workaround và consequence đã thực sự xảy ra.
-
-**1. Câu hỏi nào đã giúp user kể một tình huống cụ thể?**
-
-Câu hỏi “Bạn có thể kể lần gần nhất bạn gặp một phần không hiểu và bạn đã giải quyết nó như thế nào?” giúp người tham gia bắt đầu mô tả hành vi thực tế. Từ đó, người tham gia cho biết họ chụp ảnh phần slide không hiểu, gửi sang AI bên ngoài và yêu cầu giải thích hoặc tạo lộ trình kiến thức.
-
-Các câu hỏi về thời gian như “Quá trình đó thường mất khoảng bao nhiêu thời gian?” cũng giúp làm rõ consequence. Người tham gia cho biết nội dung đơn giản có thể mất khoảng 5–10 phút, trong khi nội dung phức tạp có thể mất vài tiếng và phải xem lại sau.
-
-**2. Chỗ nào mình cần làm tốt hơn ở lần phỏng vấn thật?**
-
-Tôi chưa giữ cuộc phỏng vấn tập trung đủ lâu vào một sự kiện cụ thể. Sau khi người tham gia bắt đầu kể, tôi nên tiếp tục hỏi theo trình tự “sau đó chuyện gì xảy ra?” thay vì chuyển sang các tình huống chung khác.
-
-Ngoài ra, câu hỏi “Theo bạn nền tảng hiện tại có cách nào có thể phát triển để giúp bạn giải quyết việc hiểu bài nhanh hơn không?” đã chuyển từ problem interview sang hỏi ý tưởng solution. Điều này khiến người tham gia bắt đầu đề xuất một nút và cách AI nên hoạt động, trong khi mục tiêu của bài là tìm evidence về problem chứ không phải thiết kế feature.
-
-Trong lần phỏng vấn thật, tôi sẽ tránh hỏi user nên xây tính năng gì và thay bằng các câu hỏi về cách họ đang xử lý vấn đề hiện tại.
-
-**3. Sau khi luyện, nhóm đã sửa Conversation Guide ở đâu và vì sao?**
-
-Nhóm sửa Conversation Guide theo ba hướng:
-
-- Neo mạnh hơn vào một sự kiện gần nhất thay vì hỏi về hành vi chung.
-- Thêm các câu follow-up theo trình tự hành động như “Sau đó chuyện gì xảy ra?” và “Bạn làm gì tiếp theo?”.
-- Loại bỏ các câu hỏi yêu cầu user đề xuất solution hoặc đánh giá feature.
-
-Nhóm cũng bổ sung câu hỏi để kiểm tra giả thuyết cạnh tranh: người học bị kẹt vì thiếu kiến thức nền, vì cách giải thích chưa phù hợp hay vì một nguyên nhân khác.
-
-Mục tiêu của các thay đổi này là giữ cuộc phỏng vấn tập trung vào behavior, workaround và consequence đã thực sự xảy ra.
-
----
-
-## 5. AI Support Log
-
-Trong bài lab này, tôi có sử dụng AI như một công cụ hỗ trợ.
-
-### AI đã hỗ trợ
-
-- Giúp rà soát cách diễn đạt Problem Hypothesis và JTBD Hypothesis.
-- Giúp kiểm tra Conversation Guide để phát hiện các câu hỏi có khả năng dẫn dắt người được phỏng vấn.
-- Giúp tổ chức lại cấu trúc README và Practice Notes.
-- Sau buổi practice interview, AI hỗ trợ chỉ ra các đoạn câu hỏi đã chuyển từ problem interview sang solution/feature ideation.
-- Giúp gợi ý cách sửa Conversation Guide theo hướng tập trung hơn vào sự kiện, hành vi, workaround và consequence đã xảy ra.
-
-### Điểm AI chưa thể thay thế
-
-AI không được sử dụng để:
-
-- tạo dữ liệu phỏng vấn;
-- bịa lời nói hoặc exact quote của người tham gia;
-- tạo fake evidence;
-- tự suy diễn những thông tin người tham gia chưa nói;
-- thay thế việc tôi tự nghe lại bản ghi và đánh giá cách mình phỏng vấn.
-
-### Điểm tôi tự kiểm tra và sửa
-
-Tôi đối chiếu các nhận định với bản ghi phỏng vấn thật.
-
-Sau khi nghe lại, tôi nhận ra một số câu hỏi của mình đã chuyển sang hỏi người tham gia đề xuất cách phát triển nền tảng. Tôi sửa Conversation Guide bằng cách loại bỏ các câu hỏi về feature tương lai và thay bằng các câu hỏi về hành vi, nguyên nhân và hậu quả đã xảy ra.
+Bản README cũ được giữ tại [day17-readme.md](day17-readme.md).

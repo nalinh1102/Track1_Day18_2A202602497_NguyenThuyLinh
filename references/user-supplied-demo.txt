@@ -1,0 +1,144 @@
+1. Đầu vào Day 17 — bản mô phỏng
+Practice Note — Linh
+Có dữ liệu thật từ repo Day 17
+- User gặp slide/khái niệm không hiểu trên VLearn.
+- User chụp màn hình phần không hiểu và gửi sang AI ngoài nền tảng.
+- User có lúc không biết nên bắt đầu học từ đâu.
+- User yêu cầu AI tạo lộ trình kiến thức.
+- Nội dung dễ mất khoảng 5–10 phút; nội dung phức tạp có thể mất vài tiếng.
+- Một số khó khăn không chỉ do thiếu kiến thức nền mà còn do cách giải thích hoặc tương tác với slide.
+Practice Note — Thuý
+SYNTHETIC / DEMO — không phải dữ liệu thật
+Tester đang học một bài về Machine Learning. Khi gặp phần công thức không hiểu, tester đọc lại slide hai lần nhưng vẫn không xác định được đang thiếu phần toán nào.
+Workaround giả lập:
+- tìm lại bài cũ;
+- search Google;
+- hỏi ChatGPT;
+- thử xem video YouTube.
+Interpretation giả lập:
+Khó khăn không chỉ là thiếu thông tin mà là không xác định được chính xác prerequisite cần ôn.
+
+Practice Note — Duyên
+SYNTHETIC / DEMO
+Tester gặp một khái niệm khó trong bài học. Thay vì tìm prerequisite, tester chỉ yêu cầu AI:
+“Giải thích đơn giản hơn và cho ví dụ.”
+
+Sau khi được giải thích bằng ví dụ, tester hiểu và tiếp tục bài.
+Interpretation giả lập:
+Có trường hợp người học không thiếu kiến thức nền; cách giải thích hiện tại mới là barrier.
+
+Solution Parking Lot — DEMO
+Bạn có thể dùng 6 hướng này để thể hiện nhóm đã mở solution space:
+1. Instant Diagnostic — AI tự suy luận prerequisite đang thiếu.
+2. Guided Diagnostic — AI hỏi 1–2 câu rồi mới suy luận.
+3. Learner-Controlled Refresher — user tự chọn phần muốn ôn.
+4. Explain Differently — AI giữ nguyên concept nhưng giải thích lại bằng ví dụ/ẩn dụ.
+5. Prerequisite Map — AI hiển thị sơ đồ kiến thức liên quan để user tự chọn.
+6. Human Escalation — nếu AI không chắc, chuyển sang đề nghị hỏi mentor/TA.
+Ba option chọn để prototype vẫn là:
+- A — Instant Diagnostic
+- B — Guided Diagnostic
+- C — Learner-Controlled Refresher
+2. Phân công thực tế — mẫu
+Phần này bạn phải sửa lại theo đúng nhóm thật trước khi nộp.
+Phân công DEMO
+- Nguyễn Thùy Linh — Option C: Learner-Controlled Refresher
+- Trần Thị Thuý — Option A: Instant Diagnostic
+- Lê Thị Duyên — Option B: Guided Diagnostic
+Phần đóng góp của Linh — mẫu để bạn tự chỉnh
+Tôi chịu trách nhiệm chính cho Option C — Learner-Controlled Refresher. Tôi tham gia thống nhất Common Context, nội dung bài học mẫu về Gradient Descent và góp ý Human–AI Decision Table cho cả ba option.  
+Ở Option C, tôi tập trung thiết kế cơ chế để người học giữ quyền quyết định: AI chỉ đưa ra các prerequisite có khả năng liên quan, còn user lựa chọn phần muốn ôn hoặc yêu cầu một cách giải thích khác. Tôi cũng bổ sung các điểm recovery gồm “Chọn chủ đề khác”, “Nhờ AI gợi ý” và “Quay lại bài”.
+Tôi hỗ trợ kiểm tra chéo Option A/B để đảm bảo cả ba prototype dùng chung bối cảnh và chỉ khác ở critical interaction.
+
+Chỉ giữ những câu bạn thực sự đã làm.
+3. Kết quả kiểm thử Day 18 — DEMO
+Phần dưới đây là feedback giả lập minh họa, không được trình bày như tester thật.
+Feedback Note 1 — DEMO
+Người điều phối: Nguyễn Thùy Linh
+Tester: T01
+Thiết bị: Laptop
+Thứ tự: B → C → A
+Relevant context: Tester từng gặp trường hợp không hiểu công thức trong bài học online và thường hỏi ChatGPT.
+Option A
+- First action: bấm ngay “Tôi chưa hiểu phần này”.
+- Hesitation: dừng khoảng vài giây khi AI kết luận “Có thể bạn đang kẹt ở Gradient”.
+- Evidence checking: mở phần “Tại sao AI nghĩ vậy?”.
+- Help needed: không.
+- Recovery: thử “Không phải phần này”.
+- DEMO observation: tester không muốn AI kết luận quá nhanh chỉ dựa trên một slide.
+Option B
+- First action: đọc các lựa chọn rồi chọn “Tôi không hiểu ∇L(θ)”.
+- Hesitation: gần như không.
+- Evidence checking: đọc phần giải thích sau diagnostic.
+- Recovery: thấy nút “Chẩn đoán lại”.
+- DEMO observation: tester cảm thấy AI có căn cứ hơn vì đã hỏi trước.
+Option C
+- First action: chọn “Gradient”.
+- Hesitation: dừng ở ba prerequisite vì không chắc phần nào thực sự liên quan.
+- Recovery: sử dụng “Nhờ AI gợi ý”.
+- DEMO observation: user thích quyền kiểm soát nhưng vẫn muốn AI hỗ trợ khi không biết chọn gì.
+Sau cả ba
+Selected Option: B
+DEMO reason: cân bằng giữa AI hỗ trợ và quyền kiểm soát.
+Trade-off: chấp nhận thêm 1–2 bước trước khi nhận câu trả lời.
+Synthetic quote — KHÔNG dùng làm quote thật:
+“Tôi muốn AI hỏi mình một chút trước, chứ đoán luôn thì hơi liều.”
+
+Feedback Note 2 — DEMO
+Điều phối: Thuý
+Tester: T02
+Thứ tự: C → A → B
+A
+Tester đi rất nhanh qua flow nhưng bỏ qua phần evidence. Khi AI đề xuất Gradient, tester bấm refresher ngay.
+B
+Tester hơi khó chịu vì phải trả lời thêm câu hỏi trong khi mục tiêu ban đầu chỉ là hiểu bài nhanh.
+C
+Tester thích việc có thể chọn “Giải thích theo cách khác” thay vì bị ép vào giả định thiếu prerequisite.
+Selected Option
+C
+Trade-off
+Tester chấp nhận phải tự quyết định nhiều hơn để đổi lấy cảm giác kiểm soát.
+Counter-evidence
+Tester không muốn hệ thống “chẩn đoán” nếu chỉ cần một cách diễn đạt dễ hiểu hơn.
+Feedback Note 3 — DEMO
+Điều phối: Duyên
+Tester: T03
+Thứ tự: A → B → C
+A
+Tester thích tốc độ nhưng tìm ngay cách đổi kết quả khi AI chọn sai prerequisite.
+B
+Tester đọc kỹ câu diagnostic và sau đó chấp nhận gợi ý của AI nhanh hơn.
+C
+Tester hiểu các lựa chọn nhưng cho rằng nếu mình biết cần học phần nào thì đã không cần AI hỗ trợ nhiều.
+Selected Option
+B
+Trade-off
+Chấp nhận mất thêm thời gian để tăng độ tin cậy.
+Counter-evidence
+User agency quá cao không nhất thiết tốt nếu chính user đang không biết mình thiếu gì.
+Group Feedback Synthesis — DEMO
+Nội dung	T01	T02	T03	Pattern
+First Action	kích hoạt trợ giúp	kích hoạt trợ giúp	kích hoạt trợ giúp	Điểm bắt đầu rõ
+Major Breakdown	A chẩn đoán quá sớm	B hơi nhiều bước	C yêu cầu user biết mình thiếu gì	Mức agency cần cân bằng
+Evidence	đọc	bỏ qua một phần	đọc	Evidence hữu ích nhưng không phải ai cũng xem
+Recovery	reject diagnosis	explain differently	diagnose again	Recovery cần rõ
+Selected	B	C	B	B xuất hiện 2/3 trong DEMO
+Trade-off	thêm bước để tin hơn	tự làm nhiều hơn để kiểm soát	chậm hơn để chính xác	Speed vs confidence/control
+
+
+Group Next Change — DEMO
+Ở iteration tiếp theo, nhóm sẽ giữ cơ chế Guided Diagnostic của Option B nhưng bổ sung shortcut “Giải thích theo cách khác” từ Option C ngay trước khi thực hiện diagnostic sâu.
+
+Lý do:
+Trong bản demo, điểm chung nổi bật là user muốn AI có đủ căn cứ trước khi đề xuất prerequisite nhưng không phải trường hợp nào cũng cần diagnostic; đôi khi họ chỉ muốn một cách giải thích khác.
+
+Still Unproven
+Chưa thể chứng minh rằng Guided Diagnostic giúp người học hiểu bài nhanh hơn trong sử dụng thực tế, cũng chưa thể kết luận đây là cơ chế được phần lớn người học ưu tiên.
+
+Đúng tinh thần bài: 3 lượt test chỉ dùng cho iteration, không phải validation.    Bai ngay 18 
+4. Reflection + AI Support — mẫu
+Reflection DEMO
+Qua quá trình chuẩn bị kiểm thử, tôi nhận ra prototype không cần có nhiều tính năng mà cần làm rõ đúng một critical interaction. Với AI Tutor, phần khó nhất không phải tạo câu trả lời của AI mà là xác định khi nào AI nên tự hành động, khi nào nên hỏi thêm và khi nào phải để user tự quyết định.
+Nếu thực hiện lại, tôi sẽ chuẩn bị task ngắn hơn và tập trung quan sát thời điểm tester tin hoặc nghi ngờ kết quả AI. Tôi cũng cần hạn chế giải thích giao diện trong lúc tester thao tác để những điểm gây bối rối được bộc lộ rõ hơn.
+
+Bạn phải chỉnh phần này theo điều bạn thực sự trải nghiệm trước khi nộp vì đề không cho AI viết thay reflection cá nhân.

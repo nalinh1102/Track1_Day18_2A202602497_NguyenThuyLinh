@@ -1,0 +1,129 @@
+1. Ba phiên test A/B/C
+Phiên 1 — Tester P1
+Người điều phối: Nguyễn Thùy Linh
+Tester: P1 — sinh viên đang học khóa online
+Thiết bị: Laptop
+Thứ tự thử: A → B → C
+Relevant Context
+Tester từng gặp trường hợp đọc slide có công thức nhưng không hiểu ý nghĩa của một ký hiệu, sau đó phải mở ChatGPT để hỏi thêm.
+Option A — Instant Diagnostic
+First Action:
+Tester bấm ngay “Tôi chưa hiểu phần này”.
+Hesitation:
+Sau khi AI hiện “Có thể bạn đang kẹt ở Gradient”, tester dừng lại vài giây trước khi bấm tiếp.
+Evidence Checking:
+Tester mở phần “Tại sao AI nghĩ vậy?” và đọc lý do AI dựa vào ký hiệu ∇L(θ) trong slide.
+Help Needed:
+Không hỏi người điều phối.
+Control & Recovery:
+Tester thử nút “Không phải phần này” để xem có thể thay đổi chẩn đoán không.
+Nhận xét quan sát:
+Flow nhanh nhưng tester không hoàn toàn tin AI nếu hệ thống kết luận ngay chỉ từ nội dung slide.
+Option B — Guided Diagnostic
+First Action:
+Tester chọn “Tôi không hiểu ∇L(θ)”.
+Hesitation:
+Tester đọc hết các lựa chọn trước khi chọn, nhưng không bị mắc kẹt.
+Evidence Checking:
+Sau câu hỏi diagnostic, tester đọc phần giải thích AI đưa ra về lý do đề xuất Gradient.
+Help Needed:
+Không.
+Control & Recovery:
+Tester chú ý tới nút “Chẩn đoán lại” và nói rằng nút này hữu ích nếu trả lời nhầm.
+Nhận xét quan sát:
+Tester có vẻ tin kết quả hơn Option A vì AI đã hỏi thêm trước khi đưa ra kết luận.
+Option C — Learner-Controlled Refresher
+First Action:
+Tester nhìn ba chủ đề rồi chọn Gradient.
+Hesitation:
+Tester dừng khá lâu trước ba lựa chọn vì chưa chắc mình thực sự thiếu phần nào.
+Evidence Checking:
+Có đọc mô tả ngắn của từng prerequisite.
+Help Needed:
+Không hỏi người điều phối nhưng dùng nút “Nhờ AI gợi ý”.
+Control & Recovery:
+Tester thấy rõ “Chọn chủ đề khác” và “Quay lại bài”.
+Sau cả ba
+Selected Option: B
+Lý do:
+AI vẫn hỗ trợ chẩn đoán nhưng không quyết định quá sớm.
+Trade-off:
+Chấp nhận thêm 1–2 bước để đổi lấy cảm giác kết quả có căn cứ hơn.
+Counter-evidence:
+Quyền kiểm soát cao ở Option C không nhất thiết hữu ích nếu chính user không biết mình đang thiếu kiến thức gì.
+Phiên 2 — Tester P2
+Người điều phối: Trần Thị Thuý
+Thiết bị: Laptop
+Thứ tự: B → C → A
+Option A
+Tester bấm trợ giúp ngay và đi qua flow nhanh.
+Tester không mở evidence ban đầu mà bấm thẳng “Ôn nhanh Gradient”.
+Khi phần giải thích chưa đúng nhu cầu, tester tìm nút “Giải thích cách khác”.
+Option B
+Tester trả lời câu diagnostic nhưng tỏ ra hơi sốt ruột vì phải thực hiện thêm bước.
+Tester hiểu cơ chế hoạt động mà không cần hỏi người điều phối.
+Option C
+Tester chọn “Giải thích theo cách khác” thay vì chọn prerequisite.
+Tester cho rằng trong nhiều trường hợp họ biết khái niệm rồi nhưng chỉ không hiểu cách slide đang diễn đạt.
+Sau cả ba
+Selected Option: C
+Lý do:
+Có thể chủ động chọn ôn kiến thức hoặc yêu cầu một cách giải thích khác.
+Trade-off:
+Chấp nhận phải tự quyết định nhiều hơn.
+Counter-evidence:
+Không phải mọi tình huống “không hiểu” đều cần diagnostic prerequisite.
+Phiên 3 — Tester P3
+Người điều phối: Lê Thị Duyên
+Thiết bị: Laptop
+Thứ tự: C → A → B
+Option A
+Tester thích tốc độ phản hồi.
+Khi AI đề xuất Gradient, tester tìm ngay xem có cách đổi chẩn đoán không trước khi đọc refresher.
+Option B
+Tester trả lời câu hỏi diagnostic và đọc kỹ kết quả.
+Không cần hỗ trợ từ facilitator.
+Tester sử dụng “Chẩn đoán lại” để kiểm tra khả năng recovery.
+Option C
+Tester đọc cả ba lựa chọn nhưng nói rằng nếu họ đã biết chính xác cần học phần nào thì việc chọn sẽ dễ; còn khi bị kẹt thực sự thì rất khó tự xác định.
+Sau cả ba
+Selected Option: B
+Lý do:
+Không hoàn toàn giao quyền cho AI nhưng cũng không bắt user tự biết nguyên nhân.
+Trade-off:
+Chấp nhận quá trình dài hơn Option A.
+Counter-evidence:
+User control càng nhiều không đồng nghĩa trải nghiệm càng tốt.
+2. Group Feedback Synthesis
+Bạn có thể đưa phần này vào:
+group-feedback-synthesis.md
+# Group Feedback Synthesis
+
+| Nội dung | Tester P1 | Tester P2 | Tester P3 | Pattern |
+|---|---|---|---|---|
+| First Action | Bấm trợ giúp | Bấm trợ giúp | Bấm trợ giúp | Điểm kích hoạt dễ nhận biết |
+| Major Breakdown | A chẩn đoán hơi sớm | B thêm bước | C khó chọn khi không biết nguyên nhân | Cần cân bằng tốc độ và agency |
+| Evidence Checking | Có đọc | Phần lớn bỏ qua | Có đọc | Evidence cần ngắn và dễ thấy |
+| Recovery | Không phải phần này | Giải thích cách khác | Chẩn đoán lại | Recovery được sử dụng ở cả ba flow |
+| Selected Option | B | C | B | B xuất hiện nhiều nhất nhưng chưa đủ để kết luận |
+| Key Trade-off | Thêm bước để tăng độ tin cậy | Tự làm nhiều hơn để tăng kiểm soát | Chậm hơn nhưng có căn cứ hơn | Speed vs Trust vs Control |
+
+3. Một Next Change
+Với ba phiên test-demo trên, Next Change hợp lý nhất là:
+## Group Next Change
+
+Ở iteration tiếp theo, nhóm sẽ giữ cơ chế Guided Diagnostic của Option B nhưng bổ sung một lựa chọn nhanh “Giải thích theo cách khác” trước khi bắt đầu quá trình diagnostic.
+
+### Evidence dẫn đến quyết định
+
+- Tester P1 và P3 cảm thấy Option B tạo cảm giác đáng tin hơn vì AI hỏi thêm trước khi đưa ra chẩn đoán.
+- Tester P2 cho thấy không phải tình huống nào cũng cần tìm prerequisite; đôi khi người học chỉ cần cách giải thích khác.
+- Các tester đều quan tâm tới khả năng sửa hoặc thoát khi AI đưa ra hỗ trợ chưa phù hợp.
+
+### Still Unproven
+
+Ba phiên kiểm thử chưa chứng minh rằng Guided Diagnostic thực sự giúp người học hiểu bài nhanh hơn trong quá trình học thật.
+
+Nhóm cũng chưa có đủ evidence để kết luận Option B phù hợp với phần lớn người học hoặc tạo ra giá trị sản phẩm dài hạn.
+
+Cách kết luận này phù hợp yêu cầu Learning, Not Praise: cần pattern, một Next Change và một điều vẫn chưa chứng minh.
