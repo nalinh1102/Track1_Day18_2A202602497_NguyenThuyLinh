@@ -1,16 +1,16 @@
 # Prototype Feedback Note — Nguyễn Thùy Linh
 
 ## Nguồn và bối cảnh
-**MÔ PHỎNG — không tính là phiên kiểm thử thực tế.** Xác nhận mới nhất của Linh cho biết P1/P2/P3 thuộc bộ mô phỏng, thay thế xác nhận “test thật” trước đó. Giữ [nguồn gốc](references/test-supplement-demo.txt) để đối chiếu; mọi hành vi bên dưới là hành vi mô phỏng.
+Dữ liệu phiên thực tế do Linh cung cấp và xác nhận lại ngày 06/10/2026. Nhãn mô phỏng trước đó là nhầm lẫn. [Nguồn nguyên gốc](references/test-supplement-demo.txt) được giữ để đối chiếu; tên file lưu trữ không xác định trạng thái dữ liệu.
 
 - Người điều phối: Nguyễn Thùy Linh.
 - Tester: P1 — sinh viên đang học khóa online. Mã này thuộc test Day 18; chưa xác định có trùng người P1 Day 17 hay không.
 - Thiết bị: Laptop.
 - Thứ tự: A → B → C.
 - Bối cảnh: từng không hiểu một ký hiệu trong slide có công thức và mở ChatGPT hỏi thêm.
-- Ngày trong mô phỏng: 01/10/2026, không phải ngày test thực tế được xác nhận.
-- Persona P1 được mô tả là sinh viên ngoài nhóm trong bộ mô phỏng, học AI/ML và tìm giải thích qua ChatGPT/Google. Không xác nhận một người thật đã tham gia.
-- Theo Linh, bộ mô phỏng dùng A/B/C của AI Tutor; tên hành động ghi theo nghĩa, không phải nguyên văn UI. Chưa đủ để xác lập thao tác đã diễn ra trên bản hiện tại.
+- Ngày test: 01/10/2026.
+- P1 là sinh viên ngoài nhóm Matcha, học AI/ML, tìm cách giải thích qua ChatGPT/Google.
+- Theo Linh, phiên dùng A/B/C của AI Tutor; tên hành động ghi gần nghĩa, không phải nguyên văn UI.
 - Theo ghi chép, không hỏi facilitator ở A/B/C. Chưa có mô tả riêng về can thiệp chủ động của facilitator.
 
 ## Ghi chép hành vi từ nguồn
@@ -34,7 +34,7 @@ Tên nút dưới đây được giữ theo ghi chép người dùng; một số
 ## Bốn tầng ghi nhận
 - **Observed:** dừng sau gợi ý A, mở căn cứ A, đọc kết quả B, dùng gợi ý AI trong C và chọn B sau ba option, theo ghi chép cung cấp.
 - **Interpreted:** việc hỏi thêm có thể khiến gợi ý B có vẻ có căn cứ hơn; C có thể tạo gánh nặng chọn nội dung. “Có vẻ tin hơn” là nhận định, không phải đo lường độ tin cậy.
-- **Decided — đề xuất iteration:** thêm đường giải thích khác trước diagnostic B; nhóm đã chốt từ mô phỏng theo Linh, cần kiểm tra thực tế.
+- **Decided — đề xuất iteration:** thêm đường giải thích khác trước diagnostic B; nhóm đã chốt theo Linh; cần kiểm tra thay đổi ở vòng tiếp theo.
 - **Still Unproven:** cảm giác có căn cứ chưa chứng minh hiểu bài tốt hơn/nhanh hơn; chưa biết lựa chọn có lặp lại trong học thực tế.
 
 ## Reflection cá nhân

@@ -1,5 +1,10 @@
 # AI Support Log — Nguyễn Thùy Linh
 
+## Trạng thái nguồn hiện tại — đính chính ngày 06/10/2026
+Linh đính chính “toàn bộ là test thật”. Theo xác nhận mới nhất, hai Practice Notes Thuý/Duyên, Parking Lot Day 17 và ba phiên A/B/C là dữ liệu thật. Các ghi nhận mô phỏng trong lịch sử log bên dưới là trạng thái đã được thay thế, không phải kết luận hiện tại.
+
+AI cập nhật nhãn nguồn, ngày/bối cảnh/ngoài nhóm và Next Change theo thông tin Linh cung cấp; tách hai notes và Parking Lot từ văn bản gốc. Không tạo hành vi/quotes mới; giữ bản nguồn nguyên văn và giới hạn về tên hành động ghi gần nghĩa. Reflection do Linh tự viết được giữ nguyên.
+
 ## Đính chính nguồn theo thông tin mới nhất của Linh
 - Linh xác nhận Practice Notes Thuý/Duyên, Parking Lot tám ý tưởng và P1/P2/P3 thuộc bộ mô phỏng. Những dòng “test thật” trong lịch sử log là xác nhận cũ, đã được thay thế; không dùng để coi bài đã có ba phiên thực tế.
 - Ngày 01–03/10/2026 và persona ngoài nhóm là thông tin mô phỏng. Tên hành động ghi gần nghĩa, không phải exact UI labels.

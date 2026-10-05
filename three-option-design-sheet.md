@@ -1,6 +1,6 @@
 # Three Option Design Sheet — Day 18
 
-> Bản thiết kế có AI hỗ trợ. Evidence Day 17 thật hiện chỉ có Practice Note Linh/P1. Người dùng xác nhận mới nhất hai notes Thuý/Duyên, Parking Lot tám ý tưởng và ba phiên Day 18 đều thuộc bộ mô phỏng; không tính là phỏng vấn/test thực tế. Prototype đã xuất bản; còn thiếu kiểm thử thực tế theo đề.
+> Bản thiết kế có AI hỗ trợ. Linh xác nhận lại ngày 06/10/2026 rằng hai Practice Notes, Parking Lot tám ý tưởng và ba phiên Day 18 là dữ liệu thật; thông tin mô phỏng trước đó là nhầm lẫn. Prototype đã xuất bản; ba feedback thực tế được tổng hợp trong repo.
 
 ## 1. Thông tin nhóm
 
@@ -15,7 +15,7 @@
 - Thuý: Option A — Instant Diagnostic.
 - Duyên: Option B — Guided Diagnostic.
 
-Đây là phân công đang dùng để tiếp tục làm Day 18; cập nhật nếu nhóm thay đổi. Practice Notes Thuý/Duyên và Parking Lot được xác nhận là mô phỏng. Xác nhận mới nhất cũng mô tả ba phiên Day 18 thuộc mô phỏng, thay thế xác nhận “test thật” trước đó. Xem tổng hợp nhóm để phân biệt dữ liệu.
+Đây là phân công được Linh xác nhận. Đầu vào thật: [note Linh](interview/notes.md), [note Thuý](interview/day17-notes-thuy.md), [note Duyên](interview/day17-notes-duyen.md), [Parking Lot](solution-parking-lot.md). Ba phiên Day 18 diễn ra ngày 01–03/10/2026 theo xác nhận Linh.
 
 ---
 
@@ -32,6 +32,8 @@ Khi đang học một bài và gặp một khái niệm không hiểu, học vi�
 | Practice Note 1 | Người tham gia chụp ảnh phần slide không hiểu và gửi sang AI bên ngoài để hỏi. | Người học phải rời khỏi flow học hiện tại để tìm hỗ trợ. |
 | Practice Note 1 | Người tham gia nói rằng đôi khi không biết nên bắt đầu học từ đâu. | Có khả năng người học gặp khó khăn trong việc xác định prerequisite cần ôn. |
 | Practice Note 1 | Nội dung đơn giản có thể mất khoảng 5–10 phút; nội dung phức tạp có thể mất vài tiếng. | Việc bị kẹt tạo ra chi phí thời gian và gián đoạn đáng kể. |
+| Practice Note Thuý | Đọc lại slide, mở bài trước, tìm Google rồi hỏi ChatGPT giải thích và cần biết gì trước; nội dung không quá khó mất khoảng 10–15 phút. | Người học có thể cần trợ giúp xác định prerequisite, không chỉ thêm tài liệu. |
+| Practice Note Duyên | Đọc định nghĩa/ví dụ, hỏi AI giải thích cho người mới và đưa ví dụ đời thường, rồi quay lại slide và hiểu phần đang học. | Cách diễn đạt có thể là barrier; không nên mặc định thiếu kiến thức nền. |
 
 ### Ẩn số vẫn chưa được chứng minh
 
@@ -188,7 +190,7 @@ Critical interaction chính xác: **ai chọn nội dung hỗ trợ tiếp theo 
 Xem [test-guide.md](test-guide.md) cho context question, outcome task, bảy hành vi quan sát, thứ tự luân phiên và ghi chú riêng facilitator. Prototype tại [prototype/index.html](prototype/index.html).
 
 ### Kiểm định hiện tại
-- Gate 1: có evidence P1 và ẩn số; thiếu hai notes/Parking Lot gốc.
+- Gate 1: có ba Practice Notes và Parking Lot theo xác nhận Linh, evidence và ẩn số được nêu rõ.
 - Gate 2–3: đã chuẩn bị cơ chế và quyền kiểm soát; cần nhóm kiểm tra chéo.
 - Gate 4: prototype công khai và các file HTML/CSS/JS trả HTTP 200; kiểm tra logic đã qua. Chưa kiểm thử trực quan/tự vận hành với người thật trong môi trường này.
-- Gate 5: chưa đạt yêu cầu ba phiên thực tế. Có bộ mô phỏng và một Next Change nhóm chốt từ mô phỏng, cần test thật để đối chiếu.
+- Gate 5: có ba feedback thực tế theo xác nhận Linh, pattern/counter-evidence, một Next Change đã chốt và Still Unproven. Các giới hạn ghi chép được giữ rõ.
