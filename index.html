@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matcha — Prototype AI Tutor A/B/C</title>
+</head>
+<body>
+  <p>Đang mở prototype AI Tutor… <a id="open" href="prototype/index.html">Mở A/B/C</a></p>
+  <script>
+    const target = new URL('prototype/index.html', location.href);
+    const selected = new URLSearchParams(location.search).get('option');
+    if (['A', 'B', 'C'].includes(selected)) target.searchParams.set('option', selected);
+    document.getElementById('open').href = target.href;
+    location.replace(target.href);
+  </script>
+</body>
+</html>

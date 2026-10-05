@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Matcha — Hỗ trợ học tập</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><strong>Matcha <span>Learning Lab</span></strong><nav aria-label="Phương án"><button data-option="A">A</button><button data-option="B">B</button><button data-option="C">C</button></nav><button id="reset" class="secondary">Bắt đầu lại</button></header>
+<main><div class="heading"><p class="eyebrow">BÀI 04 · TỐI ƯU HÓA</p><h1>Gradient Descent</h1><p>Hiểu cách tham số được cập nhật để giảm sai số.</p></div>
+<div class="workspace"><article class="lesson"><span class="tag">Nội dung bài học</span><h2>Một bước tiến về phía loss nhỏ hơn</h2><p>Gradient cho biết hướng mà hàm loss tăng nhanh nhất. Gradient Descent cập nhật tham số theo hướng ngược lại:</p><div class="formula">θ<sub>new</sub> = θ<sub>old</sub> − α∇L(θ)</div><ul><li><strong>θ:</strong> tham số cần tối ưu.</li><li><strong>α:</strong> learning rate, quyết định độ lớn bước cập nhật.</li><li><strong>∇L(θ):</strong> gradient của hàm loss tại θ hiện tại.</li></ul><p>Dấu trừ đưa tham số theo hướng ngược gradient. Với bước đủ nhỏ, điều này có thể làm loss giảm.</p><aside>Ví dụ: L(θ) = θ²; θ = 2; α = 0,1.<br>Gradient = 2θ = 4; θ mới = 2 − 0,1 × 4 = 1,6.</aside><button id="help">Tôi chưa hiểu phần này</button></article>
+<section id="support" class="support" aria-label="Hỗ trợ học tập" aria-live="polite"></section></div>
+<footer>Prototype học tập · Phản hồi dựng sẵn · Câu trả lời không được lưu.</footer></main><script src="app.js"></script>
+</body></html>
